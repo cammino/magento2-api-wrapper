@@ -1,5 +1,6 @@
 {
   "name": "magento2-api-wrapper",
+  "version": "1.4.1",
   "description": "Basic wrapper for Magento 2 API using Axios",
   "keywords": [
     "magento2",
@@ -8,14 +9,14 @@
     "node",
     "javascript"
   ],
-  "homepage": "https://gitlab.com/lumnn/magento2-api-wrapper",
+  "homepage": "https://github.com/cammino/magento2-api-wrapper",
   "bugs": {
-    "url": "https://gitlab.com/lumnn/magento2-api-wrapper/issues"
+    "url": "https://github.com/cammino/magento2-api-wrapper/issues"
   },
-  "repository": "gitlab:lumnn/magento2-api-wrapper",
+  "repository": "github:cammino/magento2-api-wrapper",
   "main": "src/index.js",
   "typings": "src/index.d.ts",
-  "author": "lumnn",
+  "author": "cammino",
   "scripts": {
     "test": "nyc --reporter=text mocha --recursive",
     "test-ci": "nyc --reporter=text mocha test/index.js test/request test/response",
