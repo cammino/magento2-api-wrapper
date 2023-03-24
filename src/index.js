@@ -48,7 +48,8 @@ function addOAuthHeaderInterceptor (config) {
     url: fullPath
   }, token)
 
-  const header = oauth.toHeader(authorization)
+  //const header = oauth.toHeader(authorization);
+  const header = { Authorization: 'Bearer ' + token.key };
 
   Object.assign(config.headers.common, header)
 
