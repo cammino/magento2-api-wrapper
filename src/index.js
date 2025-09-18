@@ -48,9 +48,9 @@ function addOAuthHeaderInterceptor (config) {
     url: fullPath
   }, token)
 
-  //const header = oauth.toHeader(authorization);
-  const header = { Authorization: 'Bearer ' + token.key };
-
+  const header = oauth.toHeader(authorization);
+  //const header = { Authorization: 'Bearer ' + token.key };
+  
   Object.assign(config.headers.common, header)
 
   return config
@@ -69,7 +69,7 @@ class Magento2Api {
   }
 
   get baseUrl () {
-    return this.apiParams.url + '/rest/V' + this.apiParams.apiVersion + '/'
+    return this.apiParams.url + 'rest/V' + this.apiParams.apiVersion + '/'
   }
 
   get axios () {
@@ -92,7 +92,7 @@ class Magento2Api {
   }
 
   getStoreBaseUrl (storeCode) {
-    return this.apiParams.url + '/rest/' + storeCode + '/V' + this.apiParams.apiVersion + '/'
+    return this.apiParams.url + 'rest/' + storeCode + '/V' + this.apiParams.apiVersion + '/'
   }
 
   request () {
